@@ -1,0 +1,28 @@
+{
+  "name": "mermaid-demo",
+  "version": "1.0.0",
+  "description": "* How to use mermaid?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamdailypractice/mermaid-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamdailypractice/mermaid-demo/issues"
+  },
+  "homepage": "https://github.com/teamdailypractice/mermaid-demo#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "mermaid": "^9.1.1"
+  }
+}
