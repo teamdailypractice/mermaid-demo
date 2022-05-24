@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js"
+    "build": "node src/mmdToHtml.js && webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "ejs": "^3.1.8",
     "mermaid": "^9.1.1"
   }
 }
