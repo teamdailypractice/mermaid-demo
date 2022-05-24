@@ -1,8 +1,10 @@
-# Mermaid Demo
+# Mermaid Markdown Support Utility
 
-* How to use mermaid?
-
-* ejs templates - <https://ejs.co/>
+* Generate HTML file from Markdown files that contain mermaid specification
+* Save the markdown files that contain mermaid specification to `markdown` directory
+* Run the build
+* **Output**: All html files are generated in `dist` directory
+* Use **LiveServer** and browse through HTML files
 
 ## Input
 
