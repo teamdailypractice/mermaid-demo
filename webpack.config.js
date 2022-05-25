@@ -6,5 +6,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.bundle.js'
     },
-    mode: 'production'
+    mode: 'development',
+    cache: {
+        type: 'filesystem',
+        cacheDirectory: path.resolve(__dirname, '.temp_cache'),
+      },
 };
