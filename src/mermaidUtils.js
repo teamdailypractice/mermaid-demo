@@ -29,10 +29,18 @@ function generateHtml(templateFilepath, data) {
     });
 
 }
-
+function generateHtmlDiagrams(fileContent, templateFilepath, outputFilepath) {
+    const mermaidSpec = markdownToJson(fileContent);
+    const data = {
+        ...mermaidSpec,
+        "outputFilepath": outputFilepath
+    };
+    generateHtml(templateFilepath, data);
+}
 
 module.exports = {
     markdownToJson,
     getHtmlFilename,
-    generateHtml
+    generateHtml,
+    generateHtmlDiagrams
 }

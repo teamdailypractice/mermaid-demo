@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { markdownToJson, getHtmlFilename, generateHtml } = require('./mermaidUtils')
+const { markdownToJson, getHtmlFilename, generateHtml, generateHtmlDiagrams } = require('./mermaidUtils')
 
 const APP_HOME = process.cwd();
 const MARKDOWN_DIR = path.join(APP_HOME, "markdown");
@@ -10,16 +10,8 @@ const TEMPLATE_DIR = path.join(APP_HOME, "src-template");
 const DIST_DIR = path.join(APP_HOME, "dist");
 const MERMAID_TEMPLATE_HTML_FILE = "mermaid.html.ejs";
 
-const files = fs.readdirSync(MARKDOWN_DIR)
 
-function generateHtmlDiagrams(fileContent, templateFilepath, outputFilepath) {
-    const mermaidSpec = markdownToJson(fileContent);
-    const data = {
-        ...mermaidSpec,
-        "outputFilepath": outputFilepath
-    };
-    generateHtml(templateFilepath, data);
-}
+const files = fs.readdirSync(MARKDOWN_DIR);
 
 for (const filename of files) {
 
