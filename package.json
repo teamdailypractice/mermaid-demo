@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/mmdToHtml.js && webpack --config webpack.config.js"
+    "build": "node src/mmdToHtml.js && webpack --config webpack.config.js",
+    "postBuild:startServer": "node src/webserver.js",
+    "postBuild:pdf": "node src/pdfGenerator.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   },
   "dependencies": {
     "ejs": "^3.1.8",
-    "mermaid": "^9.1.1"
+    "express": "^4.18.1",
+    "mermaid": "^9.1.1",
+    "puppeteer": "^14.1.1"
   }
 }

@@ -5,6 +5,7 @@
 * Run the build
 * **Output**: All html files are generated in `dist` directory
 * Use **LiveServer** and browse through HTML files
+* Generate PDF from the HTML
 
 ## Input
 
@@ -25,3 +26,11 @@ npm run build
 ## Output
 
 * `dist` directory contains the output
+
+## Post Build - PDF generation
+
+* open two command prompts in the project root directory
+* command prompt 1: `npm run postBuild:startServer`
+* After success of above, in command prompt 2: `npm run postBuild:pdf`
+* Output pdf files are generated in directory: **pdf**
+

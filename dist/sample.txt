@@ -1,1 +1,1 @@
-Sample file
+Note: Don't delete styles.css file

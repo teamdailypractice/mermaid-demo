@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>
         <% if (title) { %>
             <%= title %>
@@ -13,20 +14,21 @@
 </head>
 
 <body>
-    <h2>
-        <% if (title) { %>
-            <%= title %>
-        <% } %>
-    </h2>
-
-    <div class="mermaid">
-        <% markdown.forEach(function(line){ %>
-            <% if (line) { %>
-                <%- line %>
+    <div class="center">
+        <h2>
+            <% if (title) { %>
+                <%= title %>
             <% } %>
-        <% }); %>
-    </div>
+        </h2>
     
+        <div class="mermaid">
+            <% markdown.forEach(function(line){ %>
+                <% if (line) { %>
+                    <%- line %>
+                <% } %>
+            <% }); %>
+        </div>
+    </div>
     <script src="index.bundle.js" charset="utf-8"></script>
 </body>
 
